@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello From the Other Side | Adele Fan Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>ADELE</h1>
+        <p class="subtitle">When we were young...</p>
+    </header>
+
+    <nav class="tabs">
+        <button class="tab-btn active" data-tab="about">About</button>
+        <button class="tab-btn" data-tab="albums">Albums</button>
+        <button class="tab-btn" data-tab="gallery">Gallery</button>
+        <button class="tab-btn" data-tab="join">Join Fan Club</button>
+    </nav>
+
+    <main>
+        <section class="tab-content active" id="about">
+            <h2>About Adele</h2>
+            <div class="bio-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Adele_2016.jpg" alt="Adele" class="bio-image">
+                <div class="bio-text">
+                    <p>Adele Laurie Blue Adkins MBE (born 5 May 1988) is an English singer-songwriter. After graduating from the BRIT School in 2006, Adele signed a recording contract with XL Recordings.</p>
+                    <p>Her debut album, 19, was released in 2008 to commercial and critical success. Her second album, 21, earned her widespread recognition and numerous awards. Her third album, 25, became the best-selling album of 2015 and 2016.</p>
+                    <button id="secret-btn" class="secret-button">Press and Hold</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="tab-content" id="albums">
+            <h2>Discography</h2>
+            <div class="album-gallery">
+                <div class="album-card">
+                    <img src="c:\Users\HP\Downloads\Adele_-_19.png" alt="19 Album">
+                    <h3>19 (2008)</h3>
+                    <button class="album-btn">View Tracks</button>
+                </div>
+                <div class="album-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/1/1b/Adele_-_21.png" alt="21 Album">
+                    <h3>21 (2011)</h3>
+                    <button class="album-btn">View Tracks</button>
+                </div>
+                <div class="album-card">
+                    <img src="c:\Users\HP\Downloads\Adele_-_25_(Official_Album_Cover).png" alt="25 Album">
+                    <h3>25 (2015)</h3>
+                    <button class="album-btn">View Tracks</button>
+                </div>
+                <div class="album-card">
+                    <img src="https://experiencevinyl.com/cdn/shop/products/adele_30-128200.jpg?v=1634307300&width=1100" alt="30 Album">
+                    <h3>30 (2021)</h3>
+                    <button class="album-btn">View Tracks</button>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="tab-content" id="join">
+            <h2>Join the Adele Fan Club</h2>
+            <form id="fan-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                    <div class="error-message" id="name-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Your password" required minlength="8">
+                    <div class="password-strength">
+                        <span class="strength-bar"></span>
+                        <span class="strength-text"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="favorite-album">Favorite Album</label>
+                    <select id="favorite-album">
+                        <option value="19">19</option>
+                        <option value="21">21</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                    </select>
+                </div>
+                
+                <button type="submit" id="submit-btn">Join Now</button>
+            </form>
+            
+            <div id="form-success" class="hidden">
+                <h3>Thank you for joining!</h3>
+                <p>You'll receive updates about Adele's music and tour dates.</p>
+                <button id="reset-form">Join Another Fan</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Adele Fan Club | Not affiliated with Adele or her management</p>
+        <div class="social-links">
+            <button class="social-btn">Twitter</button>
+            <button class="social-btn">Instagram</button>
+            <button class="social-btn">Facebook</button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

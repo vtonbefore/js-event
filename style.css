@@ -1,0 +1,368 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('https://upload.wikimedia.org/wikipedia/commons/7/7c/Adele_2016.jpg') center/cover;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+/* Tab Navigation */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-btn {
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  color: #000;
+  background-color: #f0f0f0;
+}
+
+.tab-btn.active {
+  color: #000;
+  border-bottom: 3px solid #a67c52;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  padding: 0 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* About Section */
+.bio-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.bio-image {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bio-text {
+  flex: 1;
+}
+
+.secret-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #a67c52;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secret-button:hover {
+  background-color: #8a5a44;
+}
+
+/* Albums Section */
+.album-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.album-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.album-card:hover {
+  transform: translateY(-5px);
+}
+
+.album-card img {
+  width: 100%;
+  height: auto;
+}
+
+.album-card h3 {
+  padding: 1rem;
+  text-align: center;
+}
+
+.album-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #a67c52;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.album-btn:hover {
+  background-color: #8a5a44;
+}
+
+/* Gallery Section */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Form Section */
+#fan-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #a67c52;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.invalid {
+  border-color: #ff4444;
+}
+
+.password-strength {
+  margin-top: 0.5rem;
+}
+
+.strength-bar {
+  height: 4px;
+  background: #ddd;
+  display: block;
+  transition: all 0.3s;
+  width: 0;
+}
+
+.strength-text {
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+#submit-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #a67c52;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit-btn:hover {
+  background-color: #8a5a44;
+}
+
+#form-success {
+  text-align: center;
+  padding: 2rem;
+  background: #f0f0f0;
+  border-radius: 8px;
+  margin-top: 2rem;
+  display: none;
+}
+
+#form-success h3 {
+  color: #a67c52;
+  margin-bottom: 1rem;
+}
+
+#reset-form {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #a67c52;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  background-color: #333;
+  color: white;
+}
+
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-btn {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #a67c52;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bio-container {
+      flex-direction: column;
+  }
+  
+  .bio-image {
+      width: 100%;
+      margin-bottom: 1rem;
+  }
+  
+  .tabs {
+      flex-wrap: wrap;
+  }
+  
+  .tab-btn {
+      padding: 0.75rem 1rem;
+  }
+}
+
+/* Easter egg styles */
+body.easter-egg {
+  animation: rainbow 5s linear infinite;
+}
+
+@keyframes rainbow {
+  0% { background-color: #ff0000; }
+  14% { background-color: #ff7f00; }
+  28% { background-color: #ffff00; }
+  42% { background-color: #00ff00; }
+  57% { background-color: #0000ff; }
+  71% { background-color: #4b0082; }
+  85% { background-color: #9400d3; }
+  100% { background-color: #ff0000; }
+}
